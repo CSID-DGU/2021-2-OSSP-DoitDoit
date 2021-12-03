@@ -9,12 +9,15 @@
 pygame 활용 테트리스 게임 **"TTOTRIS"**  
 (original source: [PINTRIS](https://github.com/CSID-DGU/2021-1-OSSPC-Pint-9))
 
+
 **2조 두잇두잇**  
 **팀장**: [고명섭](https://github.com/tead1234)  
 **팀원**: [고다희](https://github.com/DaheeKo), [김수빈](https://github.com/sb0702)
 
-## **< TTOTRIS >**
+
+## TTOTRIS
 ![image](assets/images/LoginPage.png)
+
 
 ## 실행 방법
 1. python, pygame, pymysql 설치
@@ -45,12 +48,20 @@ python3 Ttotris.py
   * 모드 별 시작 속도 조절 기능
   * Item Mode 추가
 
+
 ## 게임 조작 방법
-![image](assets/images/HelpPage1.PNG) <br>
+* 키조작 
+
+![image](assets/images/HelpPage1.PNG) 
+
+* 아이템 설명
+
 ![image](assets/images/HelpPage2.PNG)
+
 
 ## 모드 설명 
 (모드 이미지들)
+
 
 ## Credits:
 - __Sounds__ : https://opengameart.org/content/happy-arcade-tune
@@ -58,6 +69,7 @@ python3 Ttotris.py
   - __Item__ : https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/premium-icon/dynamite_2280459 <br> https://www.flaticon.com/free-icon/undo_1574360 <br> https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/free-icon/double-arrow_1573978 <br> All designed by Freepik from Flaticon
   - __Hard__ : https://www.pngegg.com/ko/png-zmaqj
 <br>
+
 
 ## References:
 - http://www.pygame.org/docs
