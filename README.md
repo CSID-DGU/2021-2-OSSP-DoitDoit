@@ -40,7 +40,7 @@ python3 Ttotris.py
   * Hard Mode 장애물 구현
   * Fever time 방식 변경
   * 블록 생성 오류 개선
-  * PvP Mode 플레이어 별 soft drop 구현
+  * PvP Mode 플레이어 별 Soft Drop 구현
   
 * 새 기능 추가
   * 로그인 기능
