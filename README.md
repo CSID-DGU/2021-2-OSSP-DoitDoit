@@ -10,8 +10,8 @@ pygame 활용 테트리스 게임 **"TTOTRIS"**
 (original source: [PINTRIS](https://github.com/CSID-DGU/2021-1-OSSPC-Pint-9))
 
 **2조 두잇두잇**  
-**Team Leader**: [고명섭](https://github.com/tead1234)  
-**Team Member**: [고다희](https://github.com/DaheeKo), [김수빈](https://github.com/sb0702)
+**팀장**: [고명섭](https://github.com/tead1234)  
+**팀원**: [고다희](https://github.com/DaheeKo), [김수빈](https://github.com/sb0702)
 
 ## **< TTOTRIS >**
 ![image](assets/images/LoginPage.png)
