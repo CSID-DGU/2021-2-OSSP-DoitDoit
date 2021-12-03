@@ -14,7 +14,7 @@ pygame 활용 테트리스 게임 **"TTOTRIS"**
 **Team Member**: [고다희](https://github.com/DaheeKo), [김수빈](https://https://github.com/sb0702)
 
 ## **< TTOTRIS >**
-![image](assets/images/LoginPage.PNG)
+![image](assets/images/LoginPage.png)
 
 ## 실행 방법
 1. python, pygame, pymysql 설치
@@ -46,8 +46,8 @@ python3 Ttotris.py
   * Item Mode 추가
 
 ## 게임 조작 방법
-(키 help 이미지) <br>
-(아이템 help 이미지)
+![image](assets/images/HelpPage1.PNG) <br>
+![image](assets/images/HelpPage2.PNG)
 
 ## 모드 설명 
 (모드 이미지들)
