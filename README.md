@@ -43,7 +43,7 @@ python3 Ttotris.py
   * 로그인 기능
   * 기록 AWS 연동
   * 모드 별 시작 속도 조절 기능
-  * Item Mode 
+  * Item Mode 추가
 
 ## 게임 조작 방법
 (키 help 이미지) <br>
@@ -53,8 +53,6 @@ python3 Ttotris.py
 (모드 이미지들)
 
 ## Credits:
-- __Sprites__ : 
-- __Logo__ : 
 - __Sounds__ : 
 - __Obstacle__ :
   - __Item__ : https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/premium-icon/dynamite_2280459 <br> https://www.flaticon.com/free-icon/undo_1574360 <br> https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/free-icon/double-arrow_1573978 <br> All designed by Freepik from Flaticon
