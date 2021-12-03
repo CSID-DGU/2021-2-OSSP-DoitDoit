@@ -65,7 +65,7 @@ python3 Ttotris.py
 ## Credits:
 - __Sounds__ : https://opengameart.org/content/happy-arcade-tune
 - __Images__ :
-  - __Item__ : https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/premium-icon/dynamite_2280459 <br> https://www.flaticon.com/free-icon/undo_1574360 <br> https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/free-icon/double-arrow_1573978 <br> All designed by Freepik from Flaticon
+  - __Item__ : https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/premium-icon/dynamite_2280459 <br> https://www.flaticon.com/free-icon/undo_1574360 <br> https://www.flaticon.com/free-icon/double-arrow_1573978 <br> All designed by Freepik from Flaticon
   - __Hard__ : https://www.pngegg.com/ko/png-zmaqj
 <br>
 
