@@ -11,7 +11,7 @@ pygame 활용 테트리스 게임 **"TTOTRIS"**
 
 **2조 두잇두잇**  
 **Team Leader**: [고명섭](https://github.com/tead1234)  
-**Team Member**: [고다희](https://github.com/DaheeKo), [김수빈](https://https://github.com/sb0702)
+**Team Member**: [고다희](https://github.com/DaheeKo), [김수빈](https://github.com/sb0702)
 
 ## **< TTOTRIS >**
 ![image](assets/images/LoginPage.png)
@@ -53,10 +53,10 @@ python3 Ttotris.py
 (모드 이미지들)
 
 ## Credits:
-- __Sounds__ : 
-- __Obstacle__ :
+- __Sounds__ : https://opengameart.org/content/happy-arcade-tune
+- __Images__ :
   - __Item__ : https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/premium-icon/dynamite_2280459 <br> https://www.flaticon.com/free-icon/undo_1574360 <br> https://www.flaticon.com/free-icon/earthquake_1536249 <br> https://www.flaticon.com/free-icon/double-arrow_1573978 <br> All designed by Freepik from Flaticon
-  - __Hard__ : 
+  - __Hard__ : https://www.pngegg.com/ko/png-zmaqj
 <br>
 
 ## References:
