@@ -14,15 +14,23 @@ pygame 활용 테트리스 게임 **"TTOTRIS"**
 **Team Member**: [고다희](https://github.com/DaheeKo), [김수빈](https://https://github.com/sb0702)
 
 ## **< TTOTRIS >**
-(메인 이미지)
-![image]()
+![image](assets/images/LoginPage.PNG)
 
 ## 실행 방법
-(자세하게)
+1. python, pygame, pymysql 설치
 ```
-pip install pygame
-python Ttotris.py
+sudo apt-get update
+sudo apt install python3.8
+pip3 install pygame==2.0.2
+pip3 install pymysql
 ```
+2. 저장소 클론 및 실행
+```
+git clone
+cd Ttotris
+python3 Ttotris.py
+```
+
 
 ## 주요 변경 사항
 * 기존 기능 개선
