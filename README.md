@@ -26,7 +26,7 @@ pip3 install pymysql
 ```
 2. 저장소 클론 및 실행
 ```
-git clone
+git clone https://github.com/CSID-DGU/2021-2-OSSProj-DoitDoit-2.git
 cd Ttotris
 python3 Ttotris.py
 ```
