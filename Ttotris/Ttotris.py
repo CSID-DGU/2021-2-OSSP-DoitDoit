@@ -16,6 +16,8 @@ min_width = 600
 min_height = 350
 board_rate = 0.5
 size = True
+id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
 pygame.init()
 pygame.key.set_repeat(500)
 
@@ -2560,11 +2562,7 @@ while not done:
                             pass_surf = ui_variables.h2_i.render('*'* len(password), True, (0, 0, 0))   
                                       
                     elif event.type == VIDEORESIZE:
-                        if size:
-                            size = False
-                        else:
-                            size = True
-                        time.sleep(1)
+                    
                         SCREEN_WIDTH = event.w
 
                         SCREEN_HEIGHT = event.h
@@ -2587,12 +2585,7 @@ while not done:
                         inven_size = int(SCREEN_HEIGHT * 0.08)
                         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                         barrier_size = int(SCREEN_HEIGHT * 0.9)
-                        if size ==False:
-                            id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
-                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
-                        else:
-                            id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
-                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
+                        pygame.display.update()
                         
                         
                            
@@ -2621,9 +2614,11 @@ while not done:
                     screen.blit(title_menu, title.get_rect(center=(int(SCREEN_WIDTH / 1.93), int(SCREEN_HEIGHT * 0.45))))
                     screen.blit(pressEnter, title.get_rect(center=(int(SCREEN_WIDTH / 1.93), int(SCREEN_HEIGHT * 0.5))))
                 blink = not blink
-                if size:
-                    id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
-                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
+            
+                id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
+                id_box.center = (int(SCREEN_WIDTH/2.037),int(SCREEN_HEIGHT/1.8))
+                pass_box.center = (int(SCREEN_WIDTH/2.037),int(SCREEN_HEIGHT/1.55))
                 screen.blit(ID, ID.get_rect(center=(SCREEN_WIDTH / 2.3, SCREEN_HEIGHT * 1.8)))
 
                 screen.blit(title, title.get_rect(center=(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 0.1)))
