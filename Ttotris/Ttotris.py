@@ -15,6 +15,7 @@ from pygame.rect import Rect
 min_width = 600
 min_height = 350
 board_rate = 0.5
+size = True
 pygame.init()
 pygame.key.set_repeat(500)
 
@@ -1092,7 +1093,11 @@ while not done:
 
 
             elif event.type == VIDEORESIZE:
-                
+                if size:
+                    size = False
+                else:
+                    size = True
+                time.sleep(1)
                 SCREEN_WIDTH = event.w
 
                 SCREEN_HEIGHT = event.h
@@ -1105,16 +1110,22 @@ while not done:
 
                 if not ((board_rate - 0.1) < (SCREEN_HEIGHT / SCREEN_WIDTH) < (
 
-                    board_rate + 0.05)):  # 높이 또는 너비가 비율의 일정수준 이상을 넘어서게 되면
+                        board_rate + 0.05)):  # 높이 또는 너비가 비율의 일정수준 이상을 넘어서게 되면
 
                     SCREEN_WIDTH = int(SCREEN_HEIGHT / board_rate)  # 너비를 적정 비율로 바꿔줌
 
                     SCREEN_HEIGHT = int(SCREEN_WIDTH * board_rate)  # 높이를 적정 비율로 바꿔줌
-                
+
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 inven_size = int(SCREEN_HEIGHT * 0.08)
-                barrier_size = int(SCREEN_HEIGHT * 0.9)
                 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
+                barrier_size = int(SCREEN_HEIGHT * 0.9)
+                if size ==False:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                else:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 
     # Game screen
     elif start:        
@@ -1630,9 +1641,13 @@ while not done:
             elif event.type == KEYUP:
                 pygame.key.set_repeat(300)
 
-
+### 여기도 수정
             elif event.type == VIDEORESIZE:
-                pause = True
+                if size:
+                    size = False
+                else:
+                    size = True
+                time.sleep(1)
                 SCREEN_WIDTH = event.w
 
                 SCREEN_HEIGHT = event.h
@@ -1650,10 +1665,17 @@ while not done:
                     SCREEN_WIDTH = int(SCREEN_HEIGHT / board_rate)  # 너비를 적정 비율로 바꿔줌
 
                     SCREEN_HEIGHT = int(SCREEN_WIDTH * board_rate)  # 높이를 적정 비율로 바꿔줌
+
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 inven_size = int(SCREEN_HEIGHT * 0.08)
-                barrier_size = int(SCREEN_HEIGHT * 0.9)
                 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
+                barrier_size = int(SCREEN_HEIGHT * 0.9)
+                if size ==False:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                else:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 
         pygame.display.update()
 
@@ -2146,7 +2168,11 @@ while not done:
                     
 
             elif event.type == VIDEORESIZE:
-                pause = True
+                if size:
+                    size = False
+                else:
+                    size = True
+                time.sleep(1)
                 SCREEN_WIDTH = event.w
 
                 SCREEN_HEIGHT = event.h
@@ -2157,17 +2183,24 @@ while not done:
 
                     SCREEN_HEIGHT = min_height
 
-                if not ((board_rate - 0.1) < (SCREEN_HEIGHT / SCREEN_WIDTH) < (board_rate + 0.05)):  # 높이 또는 너비가 비율의 일정수준 이상을 넘어서게 되면
+                if not ((board_rate - 0.1) < (SCREEN_HEIGHT / SCREEN_WIDTH) < (
+
+                        board_rate + 0.05)):  # 높이 또는 너비가 비율의 일정수준 이상을 넘어서게 되면
 
                     SCREEN_WIDTH = int(SCREEN_HEIGHT / board_rate)  # 너비를 적정 비율로 바꿔줌
 
                     SCREEN_HEIGHT = int(SCREEN_WIDTH * board_rate)  # 높이를 적정 비율로 바꿔줌
-                
+
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 inven_size = int(SCREEN_HEIGHT * 0.08)
                 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                 barrier_size = int(SCREEN_HEIGHT * 0.9)
-                pygame.display.update()
+                if size ==False:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                else:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
 
     # Game over screen
     elif game_over:
@@ -2200,7 +2233,11 @@ while not done:
             
             # 마우스로 창크기조절
             elif event.type == VIDEORESIZE:
-                
+                if size:
+                    size = False
+                else:
+                    size = True
+                time.sleep(1)
                 SCREEN_WIDTH = event.w
 
                 SCREEN_HEIGHT = event.h
@@ -2221,16 +2258,20 @@ while not done:
 
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 inven_size = int(SCREEN_HEIGHT * 0.08)
-                barrier_size = int(SCREEN_HEIGHT * 0.9)
                 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
-                pygame.display.update()
+                barrier_size = int(SCREEN_HEIGHT * 0.9)
+                if size ==False:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                else:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 
             elif event.type == KEYDOWN:        
-
+                page, selected = MENU_PAGE, 0
                 if event.key == K_RETURN: 
                     
-                    ui_variables.click_sound.play()
-                    page, selected = MENU_PAGE, 0                
+                    ui_variables.click_sound.play()              
                     ## 여기서부터 기록 저장
                     istheresaved(text,SavedPass,"PLAYER")            
                     if DIFFICULTY_NAMES[current_selected] == "NORMAL": ## normal  명섭
@@ -2295,7 +2336,8 @@ while not done:
                     attack_stack = 0
                     attack_stack_2P = 0
                     erase_stack = 0
-                    erase_stack_2P = 0                     
+                    erase_stack_2P = 0
+                page, selected = MENU_PAGE, 0                       
                 pygame.display.flip()
                 pygame.key.set_repeat(0)
                 
@@ -2338,7 +2380,11 @@ while not done:
 
             # 마우스로 창크기조절
             elif event.type == VIDEORESIZE:
-
+                if size:
+                    size = False
+                else:
+                    size = True
+                time.sleep(1)
                 SCREEN_WIDTH = event.w
 
                 SCREEN_HEIGHT = event.h
@@ -2361,9 +2407,16 @@ while not done:
                 inven_size = int(SCREEN_HEIGHT * 0.08)
                 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                 barrier_size = int(SCREEN_HEIGHT * 0.9)
+                if size ==False:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                else:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 pygame.display.update()
 
             elif event.type == KEYDOWN:
+                page, selected = MENU_PAGE, 0
                 if event.key == K_RETURN:
                     ui_variables.click_sound.play()
                     page, selected = MENU_PAGE, 0 
@@ -2420,7 +2473,7 @@ while not done:
                     attack_stack_2P = 0
                     erase_stack = 0
                     erase_stack_2P = 0
-            
+                page, selected = MENU_PAGE, 0
     # Start screen
     else:
         # 복잡성을 줄이기 위해 start screen 내부에 page를 나누는 방식으로 구현했습니다.
@@ -2434,6 +2487,7 @@ while not done:
 
         START_PAGE, MENU_PAGE, HELP_PAGE, SETTING_PAGE, MODE_PAGE, DIFFICULTY_PAGE = 0, 10, 11, 12, 20, 30
         page, selected = START_PAGE, 0
+       
         if background_music:
             ui_variables.background_sound.play()
             background_music = False
@@ -2506,6 +2560,10 @@ while not done:
                             pass_surf = ui_variables.h2_i.render('*'* len(password), True, (0, 0, 0))   
                                       
                     elif event.type == VIDEORESIZE:
+                        if size:
+                            size = False
+                        else:
+                            size = True
                         time.sleep(1)
                         SCREEN_WIDTH = event.w
 
@@ -2529,7 +2587,13 @@ while not done:
                         inven_size = int(SCREEN_HEIGHT * 0.08)
                         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                         barrier_size = int(SCREEN_HEIGHT * 0.9)
-                    
+                        if size ==False:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                        else:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
+                        
                         
                            
                 
@@ -2549,18 +2613,19 @@ while not done:
                 passwordScreen = ui_variables.h1.render("PassWord", 1, ui_variables.grey_1)
                 ID = ui_variables.h2.render("ID", 1, ui_variables.grey_1)
                 PASSWORD = ui_variables.h2.render("PASSWORD", 1, ui_variables.grey_1)
-                title_menu = ui_variables.h5.render("INSERT ID  and  PASSWORD", 1, ui_variables.grey_1)
+                title_menu = ui_variables.h5.render("  INSERT ID  and  PASSWORD", 1, ui_variables.grey_1)
                 pressEnter = ui_variables.h5.render(" Then Press Enter to Start", 1, ui_variables.grey_1)
                 title_info = ui_variables.h6.render("Copyright (c) 2021 DOITDOIT Rights Reserved.", 1, ui_variables.grey_1)
                 
                 if blink:
-                    screen.blit(title_menu, title.get_rect(center=(int(SCREEN_WIDTH / 1.95), int(SCREEN_HEIGHT * 0.45))))
-                    screen.blit(pressEnter, title.get_rect(center=(int(SCREEN_WIDTH / 1.95), int(SCREEN_HEIGHT * 0.5))))
+                    screen.blit(title_menu, title.get_rect(center=(int(SCREEN_WIDTH / 1.93), int(SCREEN_HEIGHT * 0.45))))
+                    screen.blit(pressEnter, title.get_rect(center=(int(SCREEN_WIDTH / 1.93), int(SCREEN_HEIGHT * 0.5))))
                 blink = not blink
-
+                if size:
+                    id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                    pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 screen.blit(ID, ID.get_rect(center=(SCREEN_WIDTH / 2.3, SCREEN_HEIGHT * 1.8)))
-                id_box = pygame.Rect(SCREEN_WIDTH / 2.3, SCREEN_HEIGHT / 1.9, 140, 32)
-                pass_box = pygame.Rect(SCREEN_WIDTH / 2.3, SCREEN_HEIGHT / 1.6, 140, 32)
+
                 screen.blit(title, title.get_rect(center=(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 0.1)))
                 screen.blit(title, title.get_rect(center=(SCREEN_WIDTH / 2.5, SCREEN_HEIGHT * 1.9)))
                 screen.blit(title_info, title_info.get_rect(center=(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 0.77)))
@@ -2617,6 +2682,10 @@ while not done:
                                 page, selected = SETTING_PAGE, 0
                     # 마우스로 창크기조절
                     elif event.type == VIDEORESIZE:
+                        if size:
+                            size = False
+                        else:
+                            size = True
                         time.sleep(1)
                         SCREEN_WIDTH = event.w
 
@@ -2640,6 +2709,12 @@ while not done:
                         inven_size = int(SCREEN_HEIGHT * 0.08)
                         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                         barrier_size = int(SCREEN_HEIGHT * 0.9)
+                        if size ==False:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                        else:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 
                 screen.fill(ui_variables.white)
                 block_size = int(SCREEN_HEIGHT * 0.9)
@@ -2713,7 +2788,11 @@ while not done:
 
                     # 마우스로 창크기조절
                     elif event.type == VIDEORESIZE:
-
+                        if size:
+                            size = False
+                        else:
+                            size = True
+                        time.sleep(1)
                         SCREEN_WIDTH = event.w
 
                         SCREEN_HEIGHT = event.h
@@ -2736,6 +2815,12 @@ while not done:
                         inven_size = int(SCREEN_HEIGHT * 0.08)
                         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                         barrier_size = int(SCREEN_HEIGHT * 0.9)
+                        if size ==False:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                        else:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                        
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 screen.fill(ui_variables.white)
@@ -2847,7 +2932,11 @@ while not done:
 
                     # 마우스로 창크기조절
                     elif event.type == VIDEORESIZE:
-
+                        if size:
+                            size = False
+                        else:
+                            size = True
+                        time.sleep(1)
                         SCREEN_WIDTH = event.w
 
                         SCREEN_HEIGHT = event.h
@@ -2870,6 +2959,12 @@ while not done:
                         inven_size = int(SCREEN_HEIGHT * 0.08)
                         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                         barrier_size = int(SCREEN_HEIGHT * 0.9)
+                        if size ==False:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                        else:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 inven_size = int(SCREEN_HEIGHT * 0.08)
@@ -2994,7 +3089,11 @@ while not done:
 
                     # 마우스로 창크기조절
                     elif event.type == VIDEORESIZE:
-
+                        if size:
+                            size = False
+                        else:
+                            size = True
+                        time.sleep(1)
                         SCREEN_WIDTH = event.w
 
                         SCREEN_HEIGHT = event.h
@@ -3017,6 +3116,12 @@ while not done:
                         inven_size = int(SCREEN_HEIGHT * 0.08)
                         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                         barrier_size = int(SCREEN_HEIGHT * 0.9)
+                        if size ==False:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                        else:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                 
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 inven_size = int(SCREEN_HEIGHT * 0.08)
@@ -3174,7 +3279,11 @@ while not done:
                                 
                          # 마우스로 창크기조절
                     elif event.type == VIDEORESIZE:
-
+                        if size:
+                            size = False
+                        else:
+                            size = True
+                        time.sleep(1)
                         SCREEN_WIDTH = event.w
 
                         SCREEN_HEIGHT = event.h
@@ -3197,6 +3306,12 @@ while not done:
                         inven_size = int(SCREEN_HEIGHT * 0.08)
                         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.RESIZABLE)
                         barrier_size = int(SCREEN_HEIGHT * 0.9)
+                        if size ==False:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.8, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.15, SCREEN_HEIGHT / 1.6, 140, 32)
+                        else:
+                            id_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.9, 140, 32)
+                            pass_box = pygame.Rect(SCREEN_WIDTH / 2.29, SCREEN_HEIGHT / 1.6, 140, 32)
                         
                 block_size = int(SCREEN_HEIGHT * 0.045)
                 inven_size = int(SCREEN_HEIGHT * 0.08)
