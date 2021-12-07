@@ -1087,6 +1087,9 @@ while not done:
 
                     if item:
                         item = False
+                    
+                    if hard:
+                        hard = False
 
 
             elif event.type == VIDEORESIZE:
@@ -1189,6 +1192,10 @@ while not done:
                             if item:
                                 item = False
                                 item_over = True
+                            
+                            if hard:
+                                hard = False
+                                hard_over = True
                             pygame.time.set_timer(pygame.USEREVENT, 1)
                     else:
                         bottom_count += 1
@@ -2275,7 +2282,7 @@ while not done:
                         istheresaved(text,SavedPass,DIFFICULTY_NAMES[mode_selected])
                     if DIFFICULTY_NAMES[current_selected] == "REVERSE": ## normal   명섭
                         istheresaved(text,SavedPass,DIFFICULTY_NAMES[mode_selected])
-                    
+                    hard_over = False 
                     width = DEFAULT_WIDTH  # Board width
                     height = DEFAULT_HEIGHT
                     game_over = False
@@ -2438,7 +2445,7 @@ while not done:
                     name = [65, 65, 65]
                     matrix = [[0 for y in range(height + 1)] for x in range(width)]
                     set_difficulty = 0
-
+                    hard_over = False 
                     
 
                     min_width = 700
