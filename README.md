@@ -58,9 +58,6 @@ python3 Ttotris.py
 ![image](assets/images/HelpPage2.PNG)
 
 
-## 모드 설명 
-(모드 이미지들)
-
 
 ## Credits:
 - __Sounds__ : https://opengameart.org/content/happy-arcade-tune <br> https://opengameart.org/content/4-sci-fi-menu-sounds <br> https://opengameart.org/content/elemental-spell
